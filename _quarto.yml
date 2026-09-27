@@ -1,0 +1,39 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - index.ipynb
+    - dynamicpatch-slides.qmd
+  resources:
+    - dynamicpatch-demo.ipynb
+    - data/VCR_BT/README.txt
+
+website:
+  title: "New Approaches in GIS Time Series"
+  search: false
+  repo-url: https://github.com/zay1996/DynamicPATCH
+  repo-branch: developer-branch
+  navbar:
+    left:
+      - href: index.ipynb
+        text: DynamicPATCH
+    right:
+      - icon: github
+        href: https://github.com/zay1996/DynamicPATCH/tree/developer-branch
+        aria-label: DynamicPATCH developer branch on GitHub
+  page-footer:
+    left: "Workshop 1B · Clark University"
+    right: "Built with Quarto"
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    toc-depth: 2
+    code-copy: true
+    code-overflow: wrap
+    link-external-newwindow: true
+
+execute:
+  freeze: auto

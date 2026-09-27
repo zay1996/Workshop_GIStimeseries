@@ -1,0 +1,12 @@
+name: dynamicpatch
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - git
+  - jupyterlab
+  - ipykernel
+  - quarto
+  - pip:
+      - git+https://github.com/zay1996/DynamicPATCH.git@developer-branch
