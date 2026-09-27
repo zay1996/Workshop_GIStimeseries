@@ -1,0 +1,140 @@
+.reveal {
+  color: #18212b;
+  font-family: Aptos, "Segoe UI", Arial, sans-serif;
+}
+
+.reveal .slides {
+  text-align: left;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  color: #8e1720;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  text-transform: none;
+}
+
+.reveal h1 {
+  font-size: 2.15em;
+}
+
+.reveal h2 {
+  font-size: 1.55em;
+  border-bottom: 4px solid #b51f2a;
+  padding-bottom: 0.15em;
+}
+
+.reveal p,
+.reveal li,
+.reveal table {
+  font-size: 0.82em;
+  line-height: 1.25;
+}
+
+.reveal strong {
+  color: #8e1720;
+}
+
+.reveal img {
+  max-height: 620px;
+  object-fit: contain;
+}
+
+.reveal .title-slide,
+.reveal #title-slide {
+  color: white;
+  background: linear-gradient(125deg, #70111a, #b51f2a 70%, #dd5959);
+  border-radius: 22px;
+  padding: 56px 64px;
+}
+
+.reveal .title-slide h1,
+.reveal .title-slide h2,
+.reveal .title-slide h3,
+.reveal .title-slide p,
+.reveal #title-slide h1,
+.reveal #title-slide h2,
+.reveal #title-slide h3,
+.reveal #title-slide p {
+  color: white;
+}
+
+.reveal .title-slide h2 {
+  border-bottom: 0;
+  font-size: 2.15em;
+}
+
+.reveal .title-slide h1 {
+  margin: 0 0 0.25em;
+}
+
+.reveal .title-slide .event-kicker {
+  margin-bottom: 0.35em;
+  color: #ffe8e8;
+  font-size: 0.72em;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.reveal .title-slide .event-line {
+  font-size: 0.72em;
+  color: #ffe8e8;
+}
+
+.reveal .metric-row {
+  display: flex;
+  gap: 1em;
+  margin: 0.7em 0;
+}
+
+.reveal .metric {
+  flex: 1;
+  padding: 0.55em 0.7em;
+  border-left: 8px solid #b51f2a;
+  background: #f5f1ed;
+}
+
+.reveal .metric .value {
+  display: block;
+  color: #8e1720;
+  font-size: 1.45em;
+  font-weight: 750;
+}
+
+.reveal .transition-type-column {
+  box-sizing: border-box;
+  padding: 0.45em 0.75em;
+  background: #f7f4f1;
+  border-top: 6px solid #b51f2a;
+}
+
+.reveal .transition-label {
+  margin-bottom: 0.35em;
+  color: #8e1720;
+  font-size: 1.05em;
+  font-weight: 700;
+}
+
+.reveal .small-note {
+  font-size: 0.62em;
+  color: #4c5966;
+}
+
+.reveal .citation {
+  font-size: 0.5em;
+  color: #52606d;
+}
+
+.reveal .slide-number,
+.reveal .footer {
+  color: #6c737a;
+}
+
+.reveal pre code {
+  font-size: 0.8em;
+  line-height: 1.18;
+  max-height: 540px;
+}

@@ -1,0 +1,170 @@
+[
+  {
+    "objectID": "dynamicpatch-slides.html#the-question",
+    "href": "dynamicpatch-slides.html#the-question",
+    "title": "Workshop 1B: New Approaches in GIS Time Series",
+    "section": "The question",
+    "text": "The question\n\n\nStudy area: Long Term Ecological Research Network’s Plum Island Ecosystems (PIE-LTER)\nHow would you analyze the change patterns of ponds in these maps?\n\nPixel-based: change per pixel\nPatch-based: change per connected patch\n\n\n\n\n\nData source: Environmental Data Initiative, knb-lter-gce.657.6"
+  },
+  {
+    "objectID": "dynamicpatch-slides.html#what-is-a-patch",
+    "href": "dynamicpatch-slides.html#what-is-a-patch",
+    "title": "Workshop 1B: New Approaches in GIS Time Series",
+    "section": "What is a patch?",
+    "text": "What is a patch?\n\n\n\n\nTwo ways to define connected pixels:\n\n8-connectivity: edges or corners touch\n4-connectivity: edges touch\n\nThe choice changes the number and geometry of patches."
+  },
+  {
+    "objectID": "dynamicpatch-slides.html#overlay-shows-changebut-which-patch-transition",
+    "href": "dynamicpatch-slides.html#overlay-shows-changebut-which-patch-transition",
+    "title": "Workshop 1B: New Approaches in GIS Time Series",
+    "section": "Overlay shows change—but which patch transition?",
+    "text": "Overlay shows change—but which patch transition?\n\n\n\n\nGIS map overlays identify:\n\nStable absence\nStable presence\nGain\nLoss\n\nHow do we explicitly characterize the dynamic transition patterns of a target land cover?"
+  },
+  {
+    "objectID": "dynamicpatch-slides.html#net-zero-can-hide-complete-reorganization",
+    "href": "dynamicpatch-slides.html#net-zero-can-hide-complete-reorganization",
+    "title": "Workshop 1B: New Approaches in GIS Time Series",
+    "section": "Net zero can hide complete reorganization",
+    "text": "Net zero can hide complete reorganization\n\n\n\nInitial and final presence 92 pixels\n\n\nInitial and final patch count 8 patches\n\n\nNet change 0\n\n\nThe overlay still contains 64 change pixels in 8 change patches."
+  },
+  {
+    "objectID": "dynamicpatch-slides.html#eight-transition-types",
+    "href": "dynamicpatch-slides.html#eight-transition-types",
+    "title": "Workshop 1B: New Approaches in GIS Time Series",
+    "section": "Eight transition types",
+    "text": "Eight transition types\n\n\n\nGain\n\n\nAppearing: 0 connected initial presence patches → increase\nMerging: more than 1 → decrease\nFilling: 1 and no exterior absence → no gross count change\nExpanding: 1 and exterior absence remains → no gross count change\n\n\n\nLoss\n\n\nDisappearing: 0 connected final presence patches → decrease\nSplitting: more than 1 → increase\nPerforating: 1 and no exterior absence initially → no gross count change\nContracting: 1 and exterior absence exists → no gross count change\n\n\n\nThe eight types are mutually exclusive and collectively exhaustive."
+  },
+  {
+    "objectID": "dynamicpatch-slides.html#gross-change-in-area",
+    "href": "dynamicpatch-slides.html#gross-change-in-area",
+    "title": "Workshop 1B: New Approaches in GIS Time Series",
+    "section": "Gross change in area",
+    "text": "Gross change in area\n\n\n\n\nGross gain = 32 pixels\n\nAppearing 16 · Merging 8\nFilling 2 · Expanding 6\n\nGross loss = 32 pixels\n\nDisappearing 16 · Splitting 8\nPerforating 2 · Contracting 6"
+  },
+  {
+    "objectID": "dynamicpatch-slides.html#gross-change-in-patch-count",
+    "href": "dynamicpatch-slides.html#gross-change-in-patch-count",
+    "title": "Workshop 1B: New Approaches in GIS Time Series",
+    "section": "Gross change in patch count",
+    "text": "Gross change in patch count\nUnion patch: the union of initial presence and final presence.\nFor each union patch:\n\\[\\Delta N = N_{\\text{final presence}} - N_{\\text{initial presence}}\\]\n\n\nGross increase +2 Appearing + splitting\n\n\nGross decrease −2 Disappearing + merging\n\n\nNet change 0 Gross changes cancel"
+  },
+  {
+    "objectID": "dynamicpatch-slides.html#pie-lter-case-study",
+    "href": "dynamicpatch-slides.html#pie-lter-case-study",
+    "title": "Workshop 1B: New Approaches in GIS Time Series",
+    "section": "PIE-LTER case study",
+    "text": "PIE-LTER case study\n\n\n\n\n\n\nTargets: marsh and pond across 1938, 1971, and 2013."
+  },
+  {
+    "objectID": "dynamicpatch-slides.html#spatially-explicit-transition-maps",
+    "href": "dynamicpatch-slides.html#spatially-explicit-transition-maps",
+    "title": "Workshop 1B: New Approaches in GIS Time Series",
+    "section": "Spatially explicit transition maps",
+    "text": "Spatially explicit transition maps\n\n\nEach interval map contains the two stable types and eight transition types."
+  },
+  {
+    "objectID": "dynamicpatch-slides.html#gross-area-change-is-larger-than-net-change",
+    "href": "dynamicpatch-slides.html#gross-area-change-is-larger-than-net-change",
+    "title": "Workshop 1B: New Approaches in GIS Time Series",
+    "section": "Gross area change is larger than net change",
+    "text": "Gross area change is larger than net change\n\n\nPond gross gains are more than twice the gross losses.\nPerforating + contracting account for 89% of marsh gross loss.\nExpanding + filling account for 94% of marsh gross gain."
+  },
+  {
+    "objectID": "dynamicpatch-slides.html#gross-patch-count-change-is-larger-than-net-change",
+    "href": "dynamicpatch-slides.html#gross-patch-count-change-is-larger-than-net-change",
+    "title": "Workshop 1B: New Approaches in GIS Time Series",
+    "section": "Gross patch-count change is larger than net change",
+    "text": "Gross patch-count change is larger than net change\n\n\n\n\n\nAppearing + disappearing dominate pond patch-count change.\nPond gross change is 10× net change.\nMarsh gross increase in the second interval is 3.8× the first.\n\n\nFor pond patches, 1938–1971 has 631 gross increases + 631 gross decreases = 1,262 changes, while net change is 0."
+  },
+  {
+    "objectID": "dynamicpatch-slides.html#applications-and-challenges",
+    "href": "dynamicpatch-slides.html#applications-and-challenges",
+    "title": "Workshop 1B: New Approaches in GIS Time Series",
+    "section": "Applications and challenges",
+    "text": "Applications and challenges\n\n\nPotential applications\n\nUrban expansion, disturbance, and forest fragmentation\nConnecting patterns to drivers and impacts\nHabitat fragmentation and connectivity\nMap comparison and land-change modelling\nAny categorical maps with more than one time point\n\n\nChallenges\n\nBorder effects\nSensitivity to 4- versus 8-connectivity\nNoise and isolated pixels\nComputational cost"
+  },
+  {
+    "objectID": "dynamicpatch-slides.html#live-demonstration-vcr-marsh-19852021",
+    "href": "dynamicpatch-slides.html#live-demonstration-vcr-marsh-19852021",
+    "title": "Workshop 1B: New Approaches in GIS Time Series",
+    "section": "Live demonstration: VCR marsh, 1985–2021",
+    "text": "Live demonstration: VCR marsh, 1985–2021\nresults = dynamicpatch.run_dynamicpatch(\n    workpath=str(data_dir),\n    year=[1985, 2021],\n    in_nodata=255,\n    connectivity=8,\n    targ_pre=2,\n    unit=\"km2\",\n    res=30,\n    map_show=True,\n    chart_show=True,\n    export_map=str(output_dir / \"VCR_marsh_transition\"),\n)\nOpen dynamicpatch-demo.ipynb and run all cells.\n\nZhang et al. 2025. “DynamicPATCH: Method and Software for Spatially Explicit Dynamic Patch Transition Characterization.” Landscape Ecology 40 (7): 132. https://doi.org/10.1007/s10980-025-02120-1"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "DynamicPATCH workshop",
+    "section": "",
+    "text": "Open the presentation slides\nIn this tutorial you will use DynamicPATCH to characterize marsh transitions at the Virginia Coast Reserve (VCR) between 1985 and 2021.\nBy the end, you will be able to:\n\ninstall the DynamicPATCH developer branch;\npoint Python to a folder of categorical raster maps;\nrun a patch-transition analysis; and\ninterpret the transition map and four summary tables.\n\nDynamicPATCH also provides a graphical interface. This notebook uses the Python interface because it makes every input and output explicit and reproducible."
+  },
+  {
+    "objectID": "index.html#workshop-materials",
+    "href": "index.html#workshop-materials",
+    "title": "DynamicPATCH workshop",
+    "section": "",
+    "text": "Open the presentation slides\nIn this tutorial you will use DynamicPATCH to characterize marsh transitions at the Virginia Coast Reserve (VCR) between 1985 and 2021.\nBy the end, you will be able to:\n\ninstall the DynamicPATCH developer branch;\npoint Python to a folder of categorical raster maps;\nrun a patch-transition analysis; and\ninterpret the transition map and four summary tables.\n\nDynamicPATCH also provides a graphical interface. This notebook uses the Python interface because it makes every input and output explicit and reproducible."
+  },
+  {
+    "objectID": "index.html#install-dynamicpatch",
+    "href": "index.html#install-dynamicpatch",
+    "title": "DynamicPATCH workshop",
+    "section": "1. Install DynamicPATCH",
+    "text": "1. Install DynamicPATCH\nDynamicPATCH recommends Python 3.10. Run the next cell once to install the current developer-branch directly from GitHub into this notebook’s Python environment.\nIf the installation reports that git is missing, install Git from https://git-scm.com/downloads or run conda install -c anaconda git in Anaconda Prompt, then run the cell again.\n\n%pip install --upgrade \"git+https://github.com/zay1996/DynamicPATCH.git@developer-branch\"\n\nIf your notebook asks you to restart the kernel after installation, restart it and continue with the next cell. You do not need to run the installation cell again.\n\nfrom pathlib import Path\nimport importlib.metadata as metadata\nimport numpy as np\nimport pandas as pd\nimport dynamicpatch\n\nprint(\"DynamicPATCH version:\", metadata.version(\"dynamicpatch\"))\n\nDynamicPATCH version: 0.2.0"
+  },
+  {
+    "objectID": "index.html#download-the-vcr-data-from-google-drive",
+    "href": "index.html#download-the-vcr-data-from-google-drive",
+    "title": "DynamicPATCH workshop",
+    "section": "2. Download the VCR data from Google Drive",
+    "text": "2. Download the VCR data from Google Drive\nDownload the workshop folder from the Google Drive link provided by the instructors. Keep the two raster files together in this structure:\ndynamicpatch-workshop/\n├── dynamicpatch-demo.ipynb\n└── data/\n    └── VCR_BT/\n        ├── 1985.tif\n        └── 2021.tif\nIf you keep that structure, the relative path below works without modification. If you put the rasters somewhere else, replace the path with the folder that contains 1985.tif and 2021.tif.\nExamples of full paths:\n\nWindows: Path(r\"C:\\Users\\your-name\\Downloads\\dynamicpatch-workshop\\data\\VCR_BT\")\nmacOS/Linux: Path(\"/Users/your-name/Downloads/dynamicpatch-workshop/data/VCR_BT\")\nGoogle Drive for desktop: use the local synced folder shown in File Explorer or Finder.\n\nDynamicPATCH accepts either a folder of input maps or a supported single input file. It expects a file-system path, so downloading or syncing the Google Drive data is the simplest approach. In Google Colab, you may instead mount Drive and use a path such as Path(\"/content/drive/MyDrive/Workshop 1B/data/VCR_BT\").\n\n# Change only this line if you stored the VCR rasters somewhere else.\ndata_dir = Path(\"data/VCR_BT\")\n\ninput_files = sorted(data_dir.glob(\"*.tif\"))\nprint(\"Input files:\", [path.name for path in input_files])\n\nInput files: ['1985.tif', '2021.tif']\n\n\nYou should see ['1985.tif', '2021.tif']. DynamicPATCH reads folder inputs in filename order, so the year list must follow the same temporal order.\n\nVCR class values\n\n\n\nValue\nLand-cover class\n\n\n\n\n1\nVegetation\n\n\n2\nMarsh\n\n\n3\nBeach\n\n\n4\nWater\n\n\n255\nNoData\n\n\n\nThis demonstration treats marsh (2) as presence and every other valid land-cover class as absence."
+  },
+  {
+    "objectID": "index.html#run-dynamicpatch",
+    "href": "index.html#run-dynamicpatch",
+    "title": "DynamicPATCH workshop",
+    "section": "3. Run DynamicPATCH",
+    "text": "3. Run DynamicPATCH\nThe complete VCR analysis is one function call.\n\n\n\n\n\n\n\n\nArgument\nWorkshop value\nMeaning\n\n\n\n\nworkpath\ndata_dir\nFolder containing the input maps\n\n\nyear\n[1985, 2021]\nYears corresponding to the maps, in temporal order\n\n\ntarg_pre\n2\nPixel value treated as presence: marsh\n\n\nin_nodata\n255\nPixel value treated as NoData\n\n\nconnectivity\n8\nQueen connectivity; pixels may connect by an edge or corner\n\n\nstudy_area\n\"VCR marsh\"\nLabel used in outputs\n\n\nmap_show\nTrue\nDisplay the transition map\n\n\nchart_show\nTrue\nCreate result charts and summary tables\n\n\nunit\n\"km2\"\nReport area in square kilometres\n\n\nres\n30\nRaster cell size in metres\n\n\nexport_map\nNone\nDo not export a GeoTIFF during this run\n\n\n\nOther useful options from the package are:\n\n\n\n\n\n\n\nArgument\nPurpose\n\n\n\n\nunit\nUse \"pixels\", \"sqm2\", \"km2\", or \"Default\"\n\n\nlog_scale\nControl the logarithmic patch-size chart; the current version supports log scale\n\n\nwidth\nChange the width of bars in the result charts\n\n\nrotation\nRotate year labels in stacked bar charts\n\n\nexport_map\nSupply an output prefix without .tif, or use None to skip export\n\n\n\n\nresults = dynamicpatch.run_dynamicpatch(\n    workpath=str(data_dir),\n    year=[1985, 2021],\n    targ_pre=2,\n    in_nodata=255,\n    connectivity=8,\n    study_area=\"VCR marsh\",\n    map_show=True,\n    chart_show=True,\n    unit=\"km2\",\n    res=30,\n    export_map=None,\n)\n\ndata loaded\nRunning Transition Analysis on time interval 0\nareaunit = km2,size_map = 9,res = 30\nwidth is  0.7 1\n\n\nc:\\Users\\AiZhang\\AppData\\Local\\miniconda3\\envs\\dynamic\\lib\\site-packages\\dynamicpatch\\create_charts.py:243: UserWarning: Attempt to set non-positive ylim on a log-scaled axis will be ignored.\n  ax.set_ylim(bottom=0)\n\n\nwidth is  0.7 1\nxlabelsize 18 1\n['1985' '2021']\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDynamicPATCH displays five figures:\n\nthe spatial transition-pattern map;\nthe distribution of transition-patch sizes;\nthe number of transition patches by type;\ngross area gain and loss; and\ngross increase and decrease in patch count.\n\nThe function also returns the underlying map and tables so you can inspect or reuse them.\n\nlist(results.keys())\n\n['pattern', 'patch_size', 'patch_num', 'gainloss', 'increase_decrease']"
+  },
+  {
+    "objectID": "index.html#interpret-the-transition-map",
+    "href": "index.html#interpret-the-transition-map",
+    "title": "DynamicPATCH workshop",
+    "section": "4. Interpret the transition map",
+    "text": "4. Interpret the transition map\nresults[\"pattern\"] is a three-dimensional array: one transition map for each consecutive pair of input years. Two input years produce one transition map.\n\n\n\nCode\nTransition pattern\n\n\n\n\n-1\nNoData\n\n\n0\nStable absence\n\n\n1\nAppearing\n\n\n2\nMerging\n\n\n3\nFilling\n\n\n4\nExpanding\n\n\n5\nDisappearing\n\n\n6\nSplitting\n\n\n7\nPerforating\n\n\n8\nContracting\n\n\n9\nStable presence\n\n\n\n\npattern = results[\"pattern\"]\nprint(\"Pattern array shape:\", pattern.shape)\n\ntransition_names = {\n    -1: \"NoData\", 0: \"Stable absence\", 1: \"Appearing\",\n     2: \"Merging\", 3: \"Filling\", 4: \"Expanding\",\n     5: \"Disappearing\", 6: \"Splitting\", 7: \"Perforating\",\n     8: \"Contracting\", 9: \"Stable presence\",\n}\n\nvalues, counts = np.unique(pattern[0], return_counts=True)\npd.DataFrame({\n    \"code\": values,\n    \"transition\": [transition_names[int(value)] for value in values],\n    \"pixels\": counts,\n})\n\nPattern array shape: (1, 2960, 1874)\n\n\n\n\n\n\n\n\n\ncode\ntransition\npixels\n\n\n\n\n0\n-1\nNoData\n1314308\n\n\n1\n0\nStable absence\n3711899\n\n\n2\n1\nAppearing\n1692\n\n\n3\n2\nMerging\n11074\n\n\n4\n3\nFilling\n6734\n\n\n5\n4\nExpanding\n11625\n\n\n6\n5\nDisappearing\n2253\n\n\n7\n6\nSplitting\n26413\n\n\n8\n7\nPerforating\n4354\n\n\n9\n8\nContracting\n21652\n\n\n10\n9\nStable presence\n435036"
+  },
+  {
+    "objectID": "index.html#read-the-four-summary-tables",
+    "href": "index.html#read-the-four-summary-tables",
+    "title": "DynamicPATCH workshop",
+    "section": "5. Read the four summary tables",
+    "text": "5. Read the four summary tables\n\nPatch sizes\npatch_size contains patch-size information for every transition type and time interval. Use it to compare the typical size and variability of appearing, merging, filling, expanding, disappearing, splitting, perforating, and contracting patches.\n\nresults[\"patch_size\"]\n\n\n\n\n\n\n\n\nyear\nStable Absence\nAppearing\nMerging\nFilling\nExpanding\nDisappearing\nSplitting\nPerforating\nContracting\nStable Presence\n\n\n\n\n0\n1985-2021\n0.0018\n0.0009\n0.0063\n0.0009\n0.0018\n0.0009\n0.0036\n0.0018\n0.0018\n0.0018\n\n\n\n\n\n\n\n\n\nNumber of patches\npatch_num counts the patches assigned to each transition type. A transition can occupy a large area because it has many patches, large patches, or both.\n\nresults[\"patch_num\"]\n\n\n\n\n\n\n\n\nyear\nStable Absence\nAppearing\nMerging\nFilling\nExpanding\nDisappearing\nSplitting\nPerforating\nContracting\nStable Presence\n\n\n\n\n0\n1985\n3059\n447\n246\n2762\n3062\n660\n273\n1673\n5532\n2217\n\n\n\n\n\n\n\n\n\nGross area gain and loss\ngainloss reports the annual area associated with each transition type. The four gain types are appearing, merging, filling, and expanding. The four loss types are disappearing, splitting, perforating, and contracting.\n\nresults[\"gainloss\"]\n\n\n\n\n\n\n\n\nyear\nAppearing\nMerging\nFilling\nExpanding\nDisappearing\nSplitting\nPerforating\nContracting\n\n\n\n\n0\n1985\n0.0423\n0.27685\n0.16835\n0.290625\n-0.056325\n-0.660325\n-0.10885\n-0.5413\n\n\n\n\n\n\n\n\n\nGross increase and decrease in patch count\nincrease_decrease reports how appearing and splitting increase patch count, while disappearing and merging decrease patch count. These gross changes can be much larger than the net change.\n\nresults[\"increase_decrease\"]\n\n\n\n\n\n\n\n\nyear\nDisappearing\nAppearing\nSplitting\nMerging\n\n\n\n\n0\n1985\n-660.0\n447.0\n284.0\n-224.0"
+  },
+  {
+    "objectID": "index.html#read-the-results-together",
+    "href": "index.html#read-the-results-together",
+    "title": "DynamicPATCH workshop",
+    "section": "6. Read the results together",
+    "text": "6. Read the results together\nUse the five outputs as complementary evidence:\n\npattern answers where each transition occurred.\npatch_size shows whether transitions occurred in small or large patches.\npatch_num shows how frequently each transition occurred.\ngainloss quantifies gross change in area.\nincrease_decrease quantifies gross change in patch count.\n\nA small net change does not mean that the landscape was stable: gross gains and gross losses may be large and may cancel each other."
+  },
+  {
+    "objectID": "index.html#optional-export-the-transition-map",
+    "href": "index.html#optional-export-the-transition-map",
+    "title": "DynamicPATCH workshop",
+    "section": "7. Optional: export the transition map",
+    "text": "7. Optional: export the transition map\nTo save a GeoTIFF, rerun the analysis with export_map set to an output path prefix. Do not include the .tif extension.\noutput_prefix = Path(\"output/VCR_marsh_transition\")\noutput_prefix.parent.mkdir(exist_ok=True)\n\n# In run_dynamicpatch, replace export_map=None with:\nexport_map=str(output_prefix)\nThe exported file will be output/VCR_marsh_transition.tif."
+  },
+  {
+    "objectID": "index.html#use-your-own-categorical-maps",
+    "href": "index.html#use-your-own-categorical-maps",
+    "title": "DynamicPATCH workshop",
+    "section": "8. Use your own categorical maps",
+    "text": "8. Use your own categorical maps\nFor another dataset, change the input folder and the dataset-specific values below:\ndata_dir = Path(\"path/to/your/maps\")\nyears = [2000, 2010, 2020]\npresence_value = 1\nnodata_value = 255\ncell_size_metres = 30\nInput maps should represent the same location, use the same coordinate system, cell size, and extent, and have filenames that sort into the same order as years. Choose connectivity=8 for queen connectivity or connectivity=4 for rook connectivity.\nThe current developer branch recommends restarting the kernel before changing the input dataset or major parameters, then running the notebook again from the import cell."
+  },
+  {
+    "objectID": "index.html#reference",
+    "href": "index.html#reference",
+    "title": "DynamicPATCH workshop",
+    "section": "Reference",
+    "text": "Reference\nDynamicPATCH developer branch: https://github.com/zay1996/DynamicPATCH/tree/developer-branch\nZhang, A., Pontius Jr, R. G., Bilintoh, T. M., Sangermano, F., & Rogan, J. (2025). DynamicPATCH: Method and software for spatially explicit dynamic patch transition characterization. Landscape Ecology, 40(7), 132. https://doi.org/10.1007/s10980-025-02120-1"
+  }
+]
