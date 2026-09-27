@@ -2,6 +2,7 @@ project:
   type: website
   output-dir: _site
   render:
+    - QUEST_VCR_1990_2000_2010_2020.ipynb 
     - index.ipynb
     - dynamicpatch-slides.qmd
   resources:
@@ -15,6 +16,8 @@ website:
   repo-branch: developer-branch
   navbar:
     left:
+      - href: QUEST_VCR_1990_2000_2010_2020.ipynb
+        text: QUEST
       - href: index.ipynb
         text: DynamicPATCH
     right:
@@ -22,7 +25,7 @@ website:
         href: https://github.com/zay1996/DynamicPATCH/tree/developer-branch
         aria-label: DynamicPATCH developer branch on GitHub
   page-footer:
-    left: "Workshop 1B · Clark University"
+    left: "Clark University"
     right: "Built with Quarto"
 
 format:

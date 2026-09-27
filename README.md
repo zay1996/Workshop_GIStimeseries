@@ -1,31 +1,21 @@
-# New Approaches in GIS Time Series
+# Workshop 1B: New Approaches in GIS Time Series
 
-This is the complete Quarto project for the DynamicPATCH portion of:
+**Mapping Spatial Patch Transitions via DynamicPATCH and Class Trajectories via QUEST**
 
-**Workshop 1B: New Approaches in GIS Time Series: Mapping Spatial Patch Transitions via DynamicPATCH and Class Trajectories via QUEST**
+**Instructors:** Antonio Fonseca and Aiyin Zhang, Clark University  
+**Location:** Room S153, CGIS South Building, 1730 Cambridge St.
 
-Room S153, CGIS South Building, 1730 Cambridge St.  
-Instructors: Antonio Fonseca and Aiyin Zhang, Clark University.
+## Workshop materials
 
-## Open the finished workshop
+- [DynamicPATCH workshop](https://zay1996.github.io/Workshop_GIStimeseries/)
+- [Presentation slides](https://zay1996.github.io/Workshop_GIStimeseries/dynamicpatch-slides.html)
 
-Extract the project and double-click `OPEN_WORKSHOP.html`. The rendered site is included in `_site`, so viewing and presenting do not require Quarto.
+## Run the DynamicPATCH exercise
 
-Double-click `PRESENT_SLIDES.cmd` to go directly to the RevealJS presentation.
+1. Select **Code → Download ZIP** and extract the workshop folder.
+2. Download `1985.tif` and `2021.tif` from the workshop Google Drive.
+3. Place both files in `data/VCR_BT`.
+4. Open `index.ipynb` in VS Code or JupyterLab.
+5. Select a Python 3.10 kernel and run the cells in order.
 
-## Run the live demonstration
-
-Open `dynamicpatch-demo.ipynb` in VS Code or JupyterLab, select **Python (DynamicPATCH)**, and choose **Run All**.
-
-The notebook uses VCR marsh data for 1985 and 2021. Copy `1985.tif` and `2021.tif` into `data/VCR_BT`. On the original workshop computer it also finds the existing Clark OneDrive data directory automatically.
-
-## Project structure
-
-- `index.qmd` — DynamicPATCH page and VCR demonstration
-- `setup.qmd` — installation, VS Code, rendering, and presentation instructions
-- `dynamicpatch-slides.qmd` — concise RevealJS slide deck
-- `dynamicpatch-demo.ipynb` — executable VCR notebook
-- `_site/index.html` — rendered site entry point
-- `_site/dynamicpatch-slides.html` — rendered presentation
-
-The code was checked against the DynamicPATCH `developer-branch` at commit `a24328f485b7d99621e23c04bb1043a5cd85c0df`.
+The notebook installs the DynamicPATCH [`developer-branch`](https://github.com/zay1996/DynamicPATCH/tree/developer-branch) and guides you through the VCR marsh-transition analysis.
