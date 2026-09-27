@@ -20,7 +20,7 @@
 1. Select **Code → Download ZIP** and extract the workshop folder.
 2. Download VCR data from the workshop Google Drive.
 3. Place both files in `data/VCR`.
-4. Open `index.ipynb` in VS Code or JupyterLab.
+4. Open `dynamicpatch.ipynb` in VS Code or JupyterLab.
 5. Select a Python 3.10 kernel and run the cells in order.
 
 The notebook installs the DynamicPATCH [`developer-branch`](https://github.com/zay1996/DynamicPATCH/tree/developer-branch) and guides you through the VCR marsh-transition analysis.

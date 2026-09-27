@@ -2,8 +2,9 @@ project:
   type: website
   output-dir: _site
   render:
+    - index.qmd
     - QUEST_VCR_1990_2000_2010_2020.ipynb 
-    - index.ipynb
+    - dynamicpatch.ipynb
     - dynamicpatch-slides.qmd
   resources:
     - dynamicpatch-demo.ipynb
@@ -18,7 +19,7 @@ website:
     left:
       - href: QUEST_VCR_1990_2000_2010_2020.ipynb
         text: QUEST
-      - href: index.ipynb
+      - href: dynamicpatch.ipynb
         text: DynamicPATCH
     right:
       - icon: github
