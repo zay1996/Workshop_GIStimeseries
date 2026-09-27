@@ -2,7 +2,9 @@
 /_site/
 /.quarto/
 /.jupyter_cache/
+.ipynb_checkpoints/
 __pycache__/
-
-
+data/
+*.tif
+*.tiff
 **/*.quarto_ipynb
