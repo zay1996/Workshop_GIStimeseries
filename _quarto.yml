@@ -9,6 +9,7 @@ project:
   resources:
     - dynamicpatch-demo.ipynb
     - data/VCR_BT/README.txt
+    - assets/slides/workshop_DynamicPATCH.pptx
 
 website:
   title: "New Approaches in GIS Time Series"
