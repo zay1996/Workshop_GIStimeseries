@@ -137,7 +137,7 @@
     "href": "index.html",
     "title": "Workshop 1B: New Approaches in GIS Time Series",
     "section": "",
-    "text": "Mapping Spatial Patch Transitions via DynamicPATCH and Class Trajectories via QUEST\nInstructors: Antonio Fonseca and Aiyin Zhang, Clark University\nLocation: Room S153, CGIS South Building, 1730 Cambridge St.\n\n\n\nWorkshop site\nPresentation slides for QUEST\nPresentation slides for DynamicPATCH\nData\n\n\n\n\n…\n\n\n\n\nSelect Code → Download ZIP and extract the workshop folder.\nDownload VCR data from the workshop Google Drive.\nPlace both files in data/VCR.\nOpen dynamicpatch.ipynb in VS Code or JupyterLab.\nSelect a Python 3.10 kernel and run the cells in order.\n\nThe notebook installs the DynamicPATCH developer-branch and guides you through the VCR marsh-transition analysis."
+    "text": "Mapping Spatial Patch Transitions via DynamicPATCH and Class Trajectories via QUEST\nInstructors: Antonio Fonseca and Aiyin Zhang, Clark University\nLocation: Room S153, CGIS South Building, 1730 Cambridge St.\n\n\n\nWorkshop site\nPresentation slides for QUEST\nPresentation slides for DynamicPATCH\nData\n\n\n\n\n\nDownload the sample raster data from the workshop Google Drive.\nUpload the data to your own Google Drive, in a single folder, keeping the file naming pattern {prefix}{year}{suffix}, one raster per year, all sharing the same grid.\nOpen the QUEST notebook in Google Colab.\nRun Section 1 to install the required libraries and mount your Google Drive.\nFill in Section 2 with your data folder, an output folder, the years covered, the file naming pattern, and your no-data value.\nRun the remaining cells in order, or use Runtime → Run all.\n\nThe notebook processes your raster time series in a single pass and generates the tables, charts, rasters, and maps described in its introduction.\n\n\n\n\nSelect Code → Download ZIP and extract the workshop folder.\nDownload VCR data from the workshop Google Drive.\nPlace both files in data/VCR.\nOpen dynamicpatch.ipynb in VS Code or JupyterLab.\nSelect a Python 3.10 kernel and run the cells in order.\n\nThe notebook installs the DynamicPATCH developer-branch and guides you through the VCR marsh-transition analysis."
   },
   {
     "objectID": "index.html#workshop-materials",
@@ -151,7 +151,7 @@
     "href": "index.html#preparation-for-quest-exercise",
     "title": "Workshop 1B: New Approaches in GIS Time Series",
     "section": "",
-    "text": "…"
+    "text": "Download the sample raster data from the workshop Google Drive.\nUpload the data to your own Google Drive, in a single folder, keeping the file naming pattern {prefix}{year}{suffix}, one raster per year, all sharing the same grid.\nOpen the QUEST notebook in Google Colab.\nRun Section 1 to install the required libraries and mount your Google Drive.\nFill in Section 2 with your data folder, an output folder, the years covered, the file naming pattern, and your no-data value.\nRun the remaining cells in order, or use Runtime → Run all.\n\nThe notebook processes your raster time series in a single pass and generates the tables, charts, rasters, and maps described in its introduction."
   },
   {
     "objectID": "index.html#preparation-for-dynamicpatch-exercise",
