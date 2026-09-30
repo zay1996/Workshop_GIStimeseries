@@ -21,26 +21,23 @@ execute:
   enabled: false
 ---
 
-## The question
+## Intro
 
-::::: columns
+:::: columns
+
 ::: {.column width="42%"}
-**Study area:** Long Term Ecological Research Network’s Plum Island Ecosystems (PIE-LTER)
-
 How would you analyze the change patterns of ponds in these maps?
 
 - **Pixel-based:** change per pixel
 - **Patch-based:** change per connected patch
 :::
 
-::: {.column width="58%"}
-![](assets/slides/image7.png){fig-alt="Pond area and patch counts at PIE-LTER in 1938, 1971, and 2013"}
-:::
-:::::
+![](images/paste-3.png){width="553"}
 
-::: citation
 Data source: Environmental Data Initiative, knb-lter-gce.657.6
-:::
+::::
+
+## Defining a patch 
 
 ## What is a patch?
 
