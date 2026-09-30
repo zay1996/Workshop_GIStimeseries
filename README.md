@@ -9,8 +9,8 @@
 
 - [Workshop site](https://zay1996.github.io/Workshop_GIStimeseries/)
 - [Presentation slides for QUEST](https://antoniovfonseca.github.io/summarize-change-components/quest-overview.html)
-- [Presentation slides for DynamicPATCH](https://zay1996.github.io/Workshop_GIStimeseries/dynamicpatch-slides.html)
-- [Data](https://drive.google.com/drive/folders/14Lfq2cC1YiIU6R-_Ad7WTLWRcgOANiyQ?usp=sharing)
+- [Presentation slides for DynamicPATCH](https://github.com/zay1996/Workshop_GIStimeseries/blob/main/assets/slides/workshop_DynamicPATCH.pptx)
+- [Data](https://github.com/zay1996/Workshop_GIStimeseries/tree/main/data)
 
 ## Preparation for QUEST exercise 
 
@@ -25,10 +25,8 @@ The notebook processes your raster time series in a single pass and generates th
 
 ## Preparation for DynamicPATCH exercise
 
-1. Select **Code → Download ZIP** and extract the workshop folder.
-2. Download VCR data from the workshop Google Drive.
-3. Place both files in `data/VCR`.
-4. Open `dynamicpatch.ipynb` in VS Code or JupyterLab.
-5. Select a Python 3.10 kernel and run the cells in order.
+1. Select **Code → Download ZIP** and extract the workshop folder. The required VCR raster data are included in the data folder.
+2. Open `dynamicpatch.ipynb` in Google Colab, or your IDE of choice (e.g., VS Code or JupyterLab).
+3. Run the cells in order.
 
 The notebook installs the DynamicPATCH [`developer-branch`](https://github.com/zay1996/DynamicPATCH/tree/developer-branch) and guides you through the VCR marsh-transition analysis.
