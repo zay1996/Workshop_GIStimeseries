@@ -4353,7 +4353,7 @@ Output folder already exists: /content/drive/MyDrive/Events/2026CGA/workshop/dat
 <span id="cb33-141"><a href="#cb33-141" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-142"><a href="#cb33-142" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> df_dist</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="cell-44" class="cell" data-cellview="form">
+<div id="cell-44" class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># @title 3.9.4 Plot trajectory contributions function</span></span>
 <span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_trajectory_contributions(</span>
 <span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>    df: pd.DataFrame,</span>
@@ -4518,7 +4518,7 @@ Output folder already exists: /content/drive/MyDrive/Events/2026CGA/workshop/dat
 <span id="cb34-162"><a href="#cb34-162" aria-hidden="true" tabindex="-1"></a>            <span class="st">"5"</span>: <span class="dv">3</span>,</span>
 <span id="cb34-163"><a href="#cb34-163" aria-hidden="true" tabindex="-1"></a>        }</span>
 <span id="cb34-164"><a href="#cb34-164" aria-hidden="true" tabindex="-1"></a>        new_labels_map <span class="op">=</span> {</span>
-<span id="cb34-165"><a href="#cb34-165" aria-hidden="true" tabindex="-1"></a>            <span class="st">"2"</span>: <span class="st">"2 Stable Extent,   Changes &gt; 1"</span>,</span>
+<span id="cb34-165"><a href="#cb34-165" aria-hidden="true" tabindex="-1"></a>            <span class="st">"2"</span>: <span class="st">"2 Stable Extent,   Changes &gt; 2"</span>,</span>
 <span id="cb34-166"><a href="#cb34-166" aria-hidden="true" tabindex="-1"></a>            <span class="st">"3"</span>: <span class="st">"3 Direct Extent,   Changes = 1"</span>,</span>
 <span id="cb34-167"><a href="#cb34-167" aria-hidden="true" tabindex="-1"></a>            <span class="st">"4"</span>: <span class="st">"4 Direct Extent,   Changes &gt; 2"</span>,</span>
 <span id="cb34-168"><a href="#cb34-168" aria-hidden="true" tabindex="-1"></a>            <span class="st">"5"</span>: <span class="st">"5 Indirect Extent, Changes &gt; 1"</span>,</span>
@@ -7675,7 +7675,7 @@ Output folder already exists: /content/drive/MyDrive/Events/2026CGA/workshop/dat
 <pre><code>Figure saved to: /content/drive/MyDrive/Events/2026CGA/workshop/dataset/quest_output_2/charts/chart_trajectory_time_interval.png</code></pre>
 </div>
 </div>
-<div id="cell-89" class="cell" data-cellview="form" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:670}}" data-outputid="742d6e34-d4ce-4109-8505-001385e3fdba">
+<div id="cell-89" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:670}}" data-outputid="742d6e34-d4ce-4109-8505-001385e3fdba">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb74"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="co"># @title 5.4.2 Plot default trajectory overall</span></span>
 <span id="cb74-2"><a href="#cb74-2" aria-hidden="true" tabindex="-1"></a>summary <span class="op">=</span> _plot_stacked_overall_bar_chart(</span>
 <span id="cb74-3"><a href="#cb74-3" aria-hidden="true" tabindex="-1"></a>    output_dir<span class="op">=</span>output_path,</span>
@@ -7698,7 +7698,7 @@ Output folder already exists: /content/drive/MyDrive/Events/2026CGA/workshop/dat
 <span id="cb74-20"><a href="#cb74-20" aria-hidden="true" tabindex="-1"></a>    y_label_base<span class="op">=</span><span class="st">"Change"</span>,</span>
 <span id="cb74-21"><a href="#cb74-21" aria-hidden="true" tabindex="-1"></a>    legend_mode<span class="op">=</span><span class="st">"computed"</span>,</span>
 <span id="cb74-22"><a href="#cb74-22" aria-hidden="true" tabindex="-1"></a>    legend_labels<span class="op">=</span>{</span>
-<span id="cb74-23"><a href="#cb74-23" aria-hidden="true" tabindex="-1"></a>        <span class="dv">2</span>: <span class="st">"2 Stable Extent,   Changes &gt; 1"</span>,</span>
+<span id="cb74-23"><a href="#cb74-23" aria-hidden="true" tabindex="-1"></a>        <span class="dv">2</span>: <span class="st">"2 Stable Extent,   Changes &gt; 2"</span>,</span>
 <span id="cb74-24"><a href="#cb74-24" aria-hidden="true" tabindex="-1"></a>        <span class="dv">3</span>: <span class="st">"3 Direct Extent,   Changes = 1"</span>,</span>
 <span id="cb74-25"><a href="#cb74-25" aria-hidden="true" tabindex="-1"></a>        <span class="dv">4</span>: <span class="st">"4 Direct Extent,   Changes &gt; 2"</span>,</span>
 <span id="cb74-26"><a href="#cb74-26" aria-hidden="true" tabindex="-1"></a>        <span class="dv">5</span>: <span class="st">"5 Indirect Extent, Changes &gt; 1"</span>,</span>
@@ -7757,7 +7757,7 @@ Output folder already exists: /content/drive/MyDrive/Events/2026CGA/workshop/dat
 <span id="cb76-20"><a href="#cb76-20" aria-hidden="true" tabindex="-1"></a>    legend_mode<span class="op">=</span><span class="st">"fixed_list"</span>,</span>
 <span id="cb76-21"><a href="#cb76-21" aria-hidden="true" tabindex="-1"></a>    legend_categories<span class="op">=</span>[<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>],</span>
 <span id="cb76-22"><a href="#cb76-22" aria-hidden="true" tabindex="-1"></a>    legend_labels<span class="op">=</span>{</span>
-<span id="cb76-23"><a href="#cb76-23" aria-hidden="true" tabindex="-1"></a>        <span class="dv">2</span>: <span class="st">"2 Stable Extent,   Changes &gt; 1"</span>,</span>
+<span id="cb76-23"><a href="#cb76-23" aria-hidden="true" tabindex="-1"></a>        <span class="dv">2</span>: <span class="st">"2 Stable Extent,   Changes &gt; 2"</span>,</span>
 <span id="cb76-24"><a href="#cb76-24" aria-hidden="true" tabindex="-1"></a>        <span class="dv">3</span>: <span class="st">"3 Direct Extent,   Changes = 1"</span>,</span>
 <span id="cb76-25"><a href="#cb76-25" aria-hidden="true" tabindex="-1"></a>        <span class="dv">4</span>: <span class="st">"4 Direct Extent,   Changes &gt; 2"</span>,</span>
 <span id="cb76-26"><a href="#cb76-26" aria-hidden="true" tabindex="-1"></a>        <span class="dv">5</span>: <span class="st">"5 Indirect Extent, Changes &gt; 1"</span>,</span>
@@ -7815,7 +7815,7 @@ Output folder already exists: /content/drive/MyDrive/Events/2026CGA/workshop/dat
 <span id="cb78-20"><a href="#cb78-20" aria-hidden="true" tabindex="-1"></a>    legend_mode<span class="op">=</span><span class="st">"fixed_list"</span>,</span>
 <span id="cb78-21"><a href="#cb78-21" aria-hidden="true" tabindex="-1"></a>    legend_categories<span class="op">=</span>[<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>],</span>
 <span id="cb78-22"><a href="#cb78-22" aria-hidden="true" tabindex="-1"></a>    legend_labels<span class="op">=</span>{</span>
-<span id="cb78-23"><a href="#cb78-23" aria-hidden="true" tabindex="-1"></a>        <span class="dv">2</span>: <span class="st">"2 Stable Extent,   Changes &gt; 1"</span>,</span>
+<span id="cb78-23"><a href="#cb78-23" aria-hidden="true" tabindex="-1"></a>        <span class="dv">2</span>: <span class="st">"2 Stable Extent,   Changes &gt; 2"</span>,</span>
 <span id="cb78-24"><a href="#cb78-24" aria-hidden="true" tabindex="-1"></a>        <span class="dv">3</span>: <span class="st">"3 Direct Extent,   Changes = 1"</span>,</span>
 <span id="cb78-25"><a href="#cb78-25" aria-hidden="true" tabindex="-1"></a>        <span class="dv">4</span>: <span class="st">"4 Direct Extent,   Changes &gt; 2"</span>,</span>
 <span id="cb78-26"><a href="#cb78-26" aria-hidden="true" tabindex="-1"></a>        <span class="dv">5</span>: <span class="st">"5 Indirect Extent, Changes &gt; 1"</span>,</span>
@@ -7870,7 +7870,7 @@ Output folder already exists: /content/drive/MyDrive/Events/2026CGA/workshop/dat
 <span id="cb80-15"><a href="#cb80-15" aria-hidden="true" tabindex="-1"></a>    ],</span>
 <span id="cb80-16"><a href="#cb80-16" aria-hidden="true" tabindex="-1"></a>    fixed_labels<span class="op">=</span>[</span>
 <span id="cb80-17"><a href="#cb80-17" aria-hidden="true" tabindex="-1"></a>        <span class="st">"1 Stable Extent,   Changes = 0"</span>,</span>
-<span id="cb80-18"><a href="#cb80-18" aria-hidden="true" tabindex="-1"></a>        <span class="st">"2 Stable Extent,   Changes &gt; 1"</span>,</span>
+<span id="cb80-18"><a href="#cb80-18" aria-hidden="true" tabindex="-1"></a>        <span class="st">"2 Stable Extent,   Changes &gt; 2"</span>,</span>
 <span id="cb80-19"><a href="#cb80-19" aria-hidden="true" tabindex="-1"></a>        <span class="st">"3 Direct Extent,   Changes = 1"</span>,</span>
 <span id="cb80-20"><a href="#cb80-20" aria-hidden="true" tabindex="-1"></a>        <span class="st">"4 Direct Extent,   Changes &gt; 2"</span>,</span>
 <span id="cb80-21"><a href="#cb80-21" aria-hidden="true" tabindex="-1"></a>        <span class="st">"5 Indirect Extent, Changes &gt; 1"</span>,</span>
