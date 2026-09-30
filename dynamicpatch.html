@@ -189,11 +189,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>By the end, you will be able to:</p>
 <ol type="1">
 <li>install the DynamicPATCH developer branch;</li>
-<li>point Python to a folder of categorical raster maps;</li>
-<li>run a patch-transition analysis; and</li>
+<li>run a DynamicPATCH transition analysis; and</li>
 <li>interpret the transition map and four summary tables.</li>
 </ol>
-<p>DynamicPATCH also provides a graphical interface. This notebook uses the Python interface because it makes every input and output explicit and reproducible.</p>
 </section>
 <section id="install-dynamicpatch" class="level2">
 <h2 class="anchored" data-anchor-id="install-dynamicpatch">1. Install DynamicPATCH</h2>
@@ -220,27 +218,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="download-the-vcr-data-from-google-drive">2. Download the VCR data from Google Drive</h2>
 <p>Download the workshop folder from the Google Drive link provided by the instructors. Keep the two raster files together in this structure:</p>
 <pre class="text"><code>dynamicpatch-workshop/
-├── dynamicpatch-demo.ipynb
-└── data/
-    └── VCR_BT/
-        ├── 1985.tif
-        └── 2021.tif</code></pre>
+- data/
+    - 1990.tif
+    - 2000.tif
+    - 2010.tif
+    - 2020.tif</code></pre>
 <p>If you keep that structure, the relative path below works without modification. If you put the rasters somewhere else, replace the path with the folder that contains <code>1985.tif</code> and <code>2021.tif</code>.</p>
 <p>Examples of full paths:</p>
 <ul>
-<li>Windows: <code>Path(r"C:\Users\your-name\Downloads\dynamicpatch-workshop\data\VCR_BT")</code></li>
-<li>macOS/Linux: <code>Path("/Users/your-name/Downloads/dynamicpatch-workshop/data/VCR_BT")</code></li>
+<li>Windows: <code>Path(r"C:\Users\your-name\Downloads\dynamicpatch-workshop\data")</code></li>
+<li>macOS/Linux: <code>Path("/Users/your-name/Downloads/dynamicpatch-workshop/data")</code></li>
 <li>Google Drive for desktop: use the local synced folder shown in File Explorer or Finder.</li>
 </ul>
-<p>DynamicPATCH accepts either a folder of input maps or a supported single input file. It expects a file-system path, so downloading or syncing the Google Drive data is the simplest approach. In Google Colab, you may instead mount Drive and use a path such as <code>Path("/content/drive/MyDrive/Workshop 1B/data/VCR_BT")</code>.</p>
-<div id="69d18443" class="cell" data-execution_count="7">
+<p>DynamicPATCH accepts either a folder of input maps or a supported single input file. It expects a file-system path, so downloading or syncing the Google Drive data is the simplest approach. In Google Colab, you may instead mount Drive and use a path such as <code>Path("/content/drive/MyDrive/Workshop 1B/data")</code>.</p>
+<div id="69d18443" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Change only this line if you stored the VCR rasters somewhere else.</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>data_dir <span class="op">=</span> Path(<span class="st">"data/VCR_BT"</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>data_dir <span class="op">=</span> Path(<span class="st">"data"</span>)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>input_files <span class="op">=</span> <span class="bu">sorted</span>(data_dir.glob(<span class="st">"*.tif"</span>))</span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Input files:"</span>, [path.name <span class="cf">for</span> path <span class="kw">in</span> input_files])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Input files: ['1985.tif', '2021.tif']</code></pre>
+<pre><code>Input files: ['1990.tif', '2000.tif', '2010.tif', '2020.tif']</code></pre>
 </div>
 </div>
 <p>You should see <code>['1985.tif', '2021.tif']</code>. DynamicPATCH reads folder inputs in filename order, so the <code>year</code> list must follow the same temporal order.</p>
@@ -388,10 +386,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<div id="0a9fffd7" class="cell" data-execution_count="8">
+<div id="0a9fffd7" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>results <span class="op">=</span> dynamicpatch.run_dynamicpatch(</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    workpath<span class="op">=</span><span class="bu">str</span>(data_dir),</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    year<span class="op">=</span>[<span class="dv">1985</span>, <span class="dv">2021</span>],</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    year<span class="op">=</span>[<span class="dv">1990</span>, <span class="dv">2000</span>, <span class="dv">2010</span>, <span class="dv">2020</span>],</span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    targ_pre<span class="op">=</span><span class="dv">2</span>,</span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    in_nodata<span class="op">=</span><span class="dv">255</span>,</span>
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    connectivity<span class="op">=</span><span class="dv">8</span>,</span>
@@ -405,17 +403,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output cell-output-stdout">
 <pre><code>data loaded
 Running Transition Analysis on time interval 0
+Running Transition Analysis on time interval 1
+Running Transition Analysis on time interval 2
 areaunit = km2,size_map = 9,res = 30
-width is  0.7 1</code></pre>
+width is  0.2333333333333333 3
+width is  0.2333333333333333 3</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
 <pre><code>c:\Users\AiZhang\AppData\Local\miniconda3\envs\dynamic\lib\site-packages\dynamicpatch\create_charts.py:243: UserWarning: Attempt to set non-positive ylim on a log-scaled axis will be ignored.
   ax.set_ylim(bottom=0)</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
-<pre><code>width is  0.7 1
-xlabelsize 18 1
-['1985' '2021']</code></pre>
+<pre><code>xlabelsize 18 3
+['1990' '2000' '2010' '2020']</code></pre>
 </div>
 <div class="cell-output cell-output-display">
 <div>
@@ -449,6 +449,20 @@ xlabelsize 18 1
 <div>
 <figure class="figure">
 <p><img src="dynamicpatch_files/figure-html/cell-5-output-8.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="dynamicpatch_files/figure-html/cell-5-output-9.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="dynamicpatch_files/figure-html/cell-5-output-10.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
