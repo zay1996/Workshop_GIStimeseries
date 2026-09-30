@@ -13,7 +13,15 @@
 - [Data](https://drive.google.com/drive/folders/14Lfq2cC1YiIU6R-_Ad7WTLWRcgOANiyQ?usp=sharing)
 
 ## Preparation for QUEST exercise 
-...
+
+1. Download the sample raster data from the [workshop Google Drive](https://drive.google.com/drive/folders/14Lfq2cC1YiIU6R-_Ad7WTLWRcgOANiyQ?usp=sharing).
+2. Upload the data to your own Google Drive, in a single folder, keeping the file naming pattern `{prefix}{year}{suffix}`, one raster per year, all sharing the same grid.
+3. Open the [QUEST notebook](https://colab.research.google.com/github/antoniovfonseca/summarize-change-components/blob/main/notebooks/v3/03_quest_pie.ipynb) in Google Colab.
+4. Run Section 1 to install the required libraries and mount your Google Drive.
+5. Fill in Section 2 with your data folder, an output folder, the years covered, the file naming pattern, and your no-data value.
+6. Run the remaining cells in order, or use **Runtime → Run all**.
+
+The notebook processes your raster time series in a single pass and generates the tables, charts, rasters, and maps described in its introduction.
 
 ## Preparation for DynamicPATCH exercise
 
