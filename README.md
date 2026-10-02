@@ -26,7 +26,7 @@ The notebook processes your raster time series in a single pass and generates th
 ## Preparation for DynamicPATCH exercise
 
 1. Select **Code → Download ZIP** and extract the workshop folder. The required VCR raster data are included in the data folder.
-2. [Open `dynamicpatch.ipynb` in Google Colab](https://colab.research.google.com/github/zay1996/Workshop_GIStimeseries/blob/main/dynamicpatch.ipynb), or your IDE of choice (e.g., VS Code or JupyterLab).
+2. Open `dynamicpatch.ipynb` in [Google Colab](https://colab.research.google.com/github/zay1996/Workshop_GIStimeseries/blob/main/dynamicpatch.ipynb), or your IDE of choice (e.g., VS Code or JupyterLab).
 3. Run the cells in order.
 
 The notebook installs the DynamicPATCH [`developer-branch`](https://github.com/zay1996/DynamicPATCH/tree/developer-branch) and guides you through the VCR marsh-transition analysis.
