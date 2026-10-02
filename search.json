@@ -18,7 +18,7 @@
     "href": "dynamicpatch.html#install-dynamicpatch",
     "title": "DynamicPATCH workshop",
     "section": "1. Install DynamicPATCH",
-    "text": "1. Install DynamicPATCH\nRun the next cell once to install the current developer-branch directly from GitHub into this notebook’s Python environment.\nIf the installation reports that git is missing, install Git from https://git-scm.com/downloads or run conda install -c anaconda git in Anaconda Prompt, then run the cell again.\n\n%%capture\n\n%pip install -q \"git+https://github.com/zay1996/DynamicPATCH.git@developer-branch\"\n\nIf your notebook asks you to restart the kernel after installation, restart it and continue with the next cell. You do not need to run the installation cell again.\n\nimport dynamicpatch\nfrom pathlib import Path\nimport numpy as np\nimport pandas as pd"
+    "text": "1. Install DynamicPATCH\nRun the next cell once to install the current developer-branch directly from GitHub into this notebook’s Python environment.\nIf the installation reports that git is missing, install Git from https://git-scm.com/downloads or run conda install -c anaconda git in Anaconda Prompt, then run the cell again.\n\n%pip install -q \"git+https://github.com/zay1996/DynamicPATCH.git@developer-branch\"\n\nIf your notebook asks you to restart the kernel after installation, restart it and continue with the next cell. You do not need to run the installation cell again.\n\nimport dynamicpatch\nfrom pathlib import Path\nimport numpy as np\nimport pandas as pd"
   },
   {
     "objectID": "dynamicpatch.html#access-the-vcr-data",
